@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">👾 deib_d</div>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+        <button id="themeButton" class="theme-button">☀</button>
+    </header>
+
+    <main>
+        <section id="contact">
+
+            <div class="section-title">
+                <h2>CONTACT ME</h2>
+                <p>You can contact me through the information below.</p>
+            </div>
+
+            <div class="contact-container">
+
+                <div class="contact-info">
+                    <h3>📞 CONTACT INFORMATION</h3>
+
+                    <p>📱 <strong>Phone:</strong> +639561540464</p>
+                    <p>📧 <strong>Gmail:</strong> daveanthonybcld.12@gmail.com</p>
+                    <p>👤 <strong>Facebook:</strong> daveanthonybacolod.5</p>
+                    <p>💻 <strong>GitHub:</strong> https://github.com/bcldeyb</p>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <h3>🗓️ DATE & TIME</h3>
+                    <p id="clock"></p>
+                </div>
+
+                <div class="contact-form">
+                    <h3>✉ SEND ME A MESSAGE</h3>
+
+                    <form id="contactForm"
+                          action="https://formspree.io/f/mwlvlyav"
+                          method="POST">
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your Name"
+                            required
+                        >
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Your Message"
+                            required
+                        ></textarea>
+
+                        <button type="submit" class="btn">
+                            SEND MESSAGE ▶
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Dave Bacolod. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

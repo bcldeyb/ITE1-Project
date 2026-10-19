@@ -1,0 +1,1063 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+    --background: #09051a;
+    --section: #120b2e;
+    --card: #1b1042;
+    --purple: #8b5cf6;
+    --light-purple: #9c69ce;
+    --text: #ffffff;
+    --gray: #c9bde8;
+    --dark-purple: #24104f;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    line-height: 1.5;
+    transition: background 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+
+/* =========================================================
+   PIXEL BOX
+========================================================= */
+
+.pixel-box {
+    background: linear-gradient(135deg, var(--section), var(--card));
+    border: 3px solid var(--purple);
+    box-shadow: 7px 7px 0 #03020a;
+    padding: 20px 25px;
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #080414;
+    border-bottom: 3px solid var(--purple);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    transition: background 0.3s ease;
+}
+
+.logo {
+    font-family: "Press Start 2P", monospace;
+    color: #4B3085;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
+    padding: 12px;
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    background: var(--purple);
+    box-shadow: 4px 4px 0 #3b176b;
+}
+
+.theme-button {
+    background: var(--card);
+    color: inherit;
+    border: 2px solid var(--light-purple);
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.theme-button:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   HOME
+========================================================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("bg-dark.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 60px 5%;
+}
+
+
+/* HOME CENTER BOX */
+
+.hero-content {
+    width: 92%;
+    max-width: 1150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(18, 11, 46, 0.90),
+        rgba(27, 16, 66, 0.90)
+    );
+
+    backdrop-filter: blur(2px);
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    color: var(--light-purple);
+}
+
+.small-title {
+    color: var(--light-purple);
+    font-family: "Press Start 2P", monospace;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(25px, 5vw, 55px);
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: var(--light-purple);
+}
+
+.hero-text h2 {
+    font-family: "Press Start 2P", monospace;
+    font-size: 16px;
+    color: #e9d5ff;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    color: var(--gray);
+    max-width: 600px;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--purple);
+    border: 3px solid var(--light-purple);
+    padding: 15px 20px;
+    color: white;
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 #03020a;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px 0 #03020a;
+}
+
+.btn-outline {
+    background: transparent;
+}
+
+
+/* PROFILE */
+
+.profile {
+    width: 300px;
+    height: 300px;
+    border: 5px solid var(--light-purple);
+    background: var(--dark-purple);
+    box-shadow: 8px 8px 0 #03020a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pixel-person {
+    width: 300%;
+    height: 300%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.pixel-person img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-name {
+    position: absolute;
+    bottom: 20px;
+    font-family: "Press Start 2P", monospace;
+    font-size: 11px;
+    color: var(--light-purple);
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-family: "Press Start 2P", monospace;
+    color: var(--light-purple);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: var(--gray);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.about-box {
+    background: var(--section);
+    border: 5px solid var(--purple);
+    padding: 25px;
+    box-shadow: 6px 6px 0 #03020a;
+}
+
+.about-box h3 {
+    font-family: "Press Start 2P", monospace;
+    color: var(--light-purple);
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.about-box p {
+    font-size: 22px;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: var(--section);
+    border: 3px solid var(--purple);
+    padding: 25px;
+    box-shadow: 6px 6px 0 #03020a;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-family: "Press Start 2P", monospace;
+    color: var(--light-purple);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: var(--gray);
+}
+
+
+/* =========================================================
+   SKILLS BACKGROUND
+========================================================= */
+
+main:has(.skills-container) {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+main:has(.skills-container) #skills {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 4% 60px;
+
+    background-image: url("skills-dark.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.light-theme main:has(.skills-container) #skills {
+    background-image: url("skills-light.jpg");
+}
+
+#skills .skills-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 40px auto;
+}
+
+#skills .skill-card {
+    background: rgba(18, 11, 46, 0.78);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+body.light-theme #skills .skill-card {
+    background: rgba(238, 234, 254, 0.78);
+}
+
+@media (max-width: 768px) {
+
+    main:has(.skills-container) #skills {
+        padding: 30px 15px;
+        background-attachment: scroll;
+    }
+
+    #skills .skills-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+/* =========================================================
+   ABOUT BACKGROUND
+========================================================= */
+
+main:has(.about-container) {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+main:has(.about-container) #about {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 4% 60px;
+
+    background-image: url("about-dark.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body.light-theme main:has(.about-container) #about {
+    background-image: url("about-light.jpg");
+}
+
+#about .about-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 40px auto;
+}
+
+#about .about-box {
+    background: rgba(18, 11, 46, 0.78);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+body.light-theme #about .about-box {
+    background: rgba(238, 234, 254, 0.78);
+}
+
+@media (max-width: 768px) {
+
+    main:has(.about-container) #about {
+        padding: 30px 15px;
+        background-attachment: scroll;
+    }
+
+    #about .about-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.contact-info,
+.contact-form {
+    background: rgba(27, 16, 66, 0.78);
+    border: 3px solid var(--purple);
+    padding: 30px;
+    box-shadow: 6px 6px 0 rgba(3, 2, 10, 0.5);
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    transition: background 0.3s ease;
+}
+
+body.light-theme .contact-info,
+body.light-theme .contact-form {
+    background: rgba(238, 234, 254, 0.78);
+    border-color: #6675C9;
+    box-shadow: 6px 6px 0 rgba(196, 188, 227, 0.5);
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-family: "Press Start 2P", monospace;
+    color: var(--light-purple);
+    font-size: 15px;
+    margin-bottom: 20px;
+    margin-top: 2px;
+}
+
+.contact-info p {
+    color: var(--gray);
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-size: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background: var(--card);
+    border: 2px solid var(--purple);
+    color: var(--text);
+    font-family: "VT323", monospace;
+    font-size: 18px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--gray);
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+
+/* =========================================================
+   CONTACT BACKGROUND
+========================================================= */
+
+#contact {
+    width: 100vw;
+    position: relative;
+
+    margin-left: calc(50% - 50vw);
+
+    background-image: url("contact-dark.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding: 40px 4% 60px;
+    min-height: 100vh;
+}
+
+body.light-theme #contact {
+    background-image: url("contact-light.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#contact .section-title {
+    margin-top: 30px;
+}
+
+#contact .contact-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 40px auto;
+}
+
+@media (max-width: 768px) {
+
+    #contact {
+        width: 100%;
+        margin-left: 0;
+        padding: 30px 15px;
+        background-attachment: scroll;
+    }
+
+    body.light-theme #contact {
+        background-attachment: scroll;
+    }
+
+    #contact .contact-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* =========================================================
+   PROJECTS BACKGROUND
+========================================================= */
+
+/* FULL-WIDTH PROJECTS PAGE */
+main:has(.projects-container) {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+/* DARK MODE */
+main:has(.projects-container) #projects {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 4% 60px;
+
+    background-image: url("projects-dark.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* LIGHT MODE */
+body.light-theme main:has(.projects-container) #projects {
+    background-image: url("projects-light.jpg");
+}
+
+
+/* =========================================================
+   PROJECTS - 6 BOXES / 3 x 2
+========================================================= */
+
+#projects .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 1150px;
+    margin: 40px auto;
+}
+
+#projects .project-card {
+    min-height: 250px;
+    padding: 25px 18px;
+    background: rgba(18, 11, 46, 0.78);
+    border: 3px solid var(--purple);
+    box-shadow: 6px 6px 0 #03020a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#projects .project-card:hover {
+    transform: translateY(-7px);
+    background: rgba(27, 16, 66, 0.90);
+    box-shadow:
+        8px 8px 0 #03020a,
+        0 0 15px rgba(139, 92, 246, 0.25);
+}
+
+#projects .project-image {
+    width: calc(100% + 36px);
+    height: 190px;
+    object-fit: cover;
+    margin: -25px -18px 20px;
+    display: block;
+    border-bottom: 3px solid var(--purple);
+}
+
+#projects .project-card h3 {
+    font-family: "Press Start 2P", monospace;
+    font-size: 13px;
+    color: var(--light-purple);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+#projects .project-card p {
+    color: var(--gray);
+    font-size: 20px;
+    line-height: 1.3;
+    max-width: 220px;
+    margin-bottom: 18px;
+}
+
+#projects .project-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: var(--purple);
+    color: white;
+    text-decoration: none;
+    font-family: "Press Start 2P", monospace;
+    font-size: 9px;
+    border: 2px solid #03020a;
+    box-shadow: 4px 4px 0 #03020a;
+    transition: 0.2s;
+}
+
+#projects .project-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #03020a;
+}
+
+/* PROJECTS LIGHT MODE */
+body.light-theme #projects .project-card {
+    background: rgba(238, 234, 254, 0.78);
+    border-color: #6675C9;
+    box-shadow: 6px 6px 0 #C4BCE3;
+}
+
+body.light-theme #projects .project-card:hover {
+    background: rgba(238, 234, 254, 0.95);
+    box-shadow:
+        8px 8px 0 #C4BCE3,
+        0 0 15px rgba(113, 104, 184, 0.20);
+}
+
+body.light-theme #projects .project-card h3 {
+    color: #7168B8;
+}
+
+body.light-theme #projects .project-card p {
+    color: #596174;
+}
+
+/* PROJECTS TABLET */
+@media (max-width: 1000px) {
+    #projects .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* PROJECTS MOBILE */
+@media (max-width: 768px) {
+    main:has(.projects-container) #projects {
+        padding: 30px 15px;
+        background-attachment: scroll;
+    }
+
+    #projects .projects-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #projects .project-card {
+        min-height: 230px;
+    }
+}
+
+/* CLOCK */
+#clock {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--purple);
+    border-top: none;
+    color: var(--light-purple);
+    font-size: 20px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 0;
+    text-align: center;
+    padding: 5px;
+    border-top: 5px solid var(--purple);
+    background: var(--section);
+    color: var(--gray);
+    font-size: 18px;
+}
+
+/* LIGHT THEME */
+body.light-theme {
+    --background: #F5F3FF;
+    --section: #EEEAFE;
+    --card: #E5DFFC;
+    --purple: #7168B8;
+    --light-purple: #8B83D6;
+    --dark-purple: #DCD6F5;
+    --text: #18233D;
+    --gray: #596174;
+}
+
+/* LIGHT NAVBAR */
+body.light-theme .navbar {
+    background: #D9E8FF;
+    border-bottom-color: #4A6FA5;
+}
+
+body.light-theme .logo {
+    color: #263B63;
+}
+
+body.light-theme nav a {
+    color: #263B63;
+}
+
+body.light-theme nav a:hover,
+body.light-theme nav a.active {
+    background: #3a404b;
+    color: #FFFFFF;
+    box-shadow: 4px 4px 0 #405B91;
+}
+
+body.light-theme .theme-button {
+    background: #C7DAF5;
+    color: #000000;
+    border-color: #4A6FA5;
+}
+
+/* LIGHT TITLES */
+body.light-theme .small-title,
+body.light-theme .section-title h2,
+body.light-theme .about-box h3,
+body.light-theme .skill-card h3,
+body.light-theme .project-card h3 {
+    color: #000000;
+}
+
+/* LIGHT PIXEL BOXES */
+body.light-theme .pixel-box,
+body.light-theme .about-box,
+body.light-theme .skill-card,
+body.light-theme .project-card {
+    box-shadow: 6px 6px 0 #C4BCE3;
+    border-color: #000000;
+}
+
+/* LIGHT HERO */
+body.light-theme .hero {
+    background-image: url("bg-light.jpg");
+}
+
+body.light-theme .hero-text h1 {
+    color: #d0daf1;
+}
+
+body.light-theme .hero-text h1 span {
+    color: #b8b3e6;
+}
+
+body.light-theme .hero-text h2 {
+    color: #a1b5e2;
+}
+
+body.light-theme .hero-text p {
+    color: #a0a3ac;
+}
+
+/* LIGHT BUTTONS */
+body.light-theme .btn {
+    background: #7168B8;
+    border-color: #8B83D6;
+    color: #FFFFFF;
+    box-shadow: 5px 5px 0 #C4BCE3;
+}
+
+body.light-theme .btn:hover {
+    background: #5C63B8;
+    box-shadow: 1px 1px 0 #C4BCE3;
+}
+
+/* LIGHT PROFILE */
+body.light-theme .profile {
+    background: #DCD6F5;
+    border-color: #6675C9;
+    box-shadow: 8px 8px 0 #C4BCE3;
+}
+
+body.light-theme .profile-name {
+    color: #000000;
+}
+
+/* LIGHT SECTION TITLE */
+body.light-theme .section-title p {
+    color: #000000;
+}
+
+/* LIGHT ABOUT */
+body.light-theme .about-box {
+    background: #EEEAFE;
+    border-color: #9aa1cb;
+}
+
+body.light-theme .about-box p {
+    font-size: 20px;
+    color: #1d2c4e;
+}
+
+/* LIGHT SKILLS */
+body.light-theme .skill-card {
+    background: #EEEAFE;
+    border-color: #6675C9;
+}
+
+body.light-theme .skill-card p {
+    color: #596174;
+}
+
+/* LIGHT CONTACT */
+body.light-theme .contact-info h3,
+body.light-theme .contact-form h3 {
+    color: #000000;
+}
+
+body.light-theme .contact-info p {
+    color: #000000;
+}
+
+body.light-theme .contact-form input,
+body.light-theme .contact-form textarea {
+    background: #E5DFFC;
+    border-color: #6675C9;
+    color: #000000;
+}
+
+body.light-theme .contact-form input::placeholder,
+body.light-theme .contact-form textarea::placeholder {
+    color: #000000;
+}
+
+/* LIGHT CLOCK */
+body.light-theme #clock {
+    border-bottom-color: #6675C9;
+    color: #000000;
+}
+
+/* LIGHT FOOTER */
+body.light-theme footer {
+    background: #c6d8fb;
+    border-top-color: #6675C9;
+    color: #596174;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 15px;
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 8px;
+        padding: 8px 6px;
+    }
+
+    .theme-button {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .hero {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        min-height: calc(100vh - 120px);
+        padding: 30px 15px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 500px;
+        padding: 25px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-text {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .small-title {
+        font-size: 9px;
+        margin-bottom: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(22px, 8vw, 35px);
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    .hero-text h2 {
+        font-size: 11px;
+        line-height: 1.5;
+        margin-bottom: 18px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .buttons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 8px;
+        padding: 12px 14px;
+    }
+
+    .profile {
+        width: 210px;
+        height: 210px;
+        flex-shrink: 0;
+    }
+
+    .pixel-person {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        padding: 18px 10px;
+        font-size: 15px;
+    }
+}
